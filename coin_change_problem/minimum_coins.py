@@ -3,6 +3,7 @@
 This module is used to get the minimum of coins to be used
 in order to get the total amount.
 """
+from sys import maxsize
 
 
 def solve(coins=[], total=0):
@@ -17,7 +18,7 @@ def solve(coins=[], total=0):
     """
     rows = len(coins)
     cols = total + 1
-    array = [[100] * cols for i in range(rows)]
+    array = [[maxsize] * cols for i in range(rows)]
 
     for i in range(rows):
         array[i][0] = 0
